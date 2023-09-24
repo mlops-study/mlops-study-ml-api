@@ -27,8 +27,7 @@ async def root():
 
 
 @app.post("/ineligible_loan_model/predict/", response_model=ModelScore)
-async def predict(features: ModelFeatures,
-                  db: Session = Depends(get_db)):
+async def predict(features: ModelFeatures, db: Session = Depends(get_db)):
     print("Start model service!")
     return model_service.predict(features=features, db=db)
 

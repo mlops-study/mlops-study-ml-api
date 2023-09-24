@@ -3,6 +3,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
+# Metadata 저장소
 ml_metadata_url = os.getenv(
     "ML_METADATA_URL",
     "mysql+pymysql://root:root@localhost/mlops_meta"

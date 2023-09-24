@@ -31,5 +31,5 @@ class TestModelPredictService(unittest.TestCase):
                                  property_area='Urban')
         db = get_db().__next__()
         # When
-        mode_score = self.model_service.predict(db=db, features=features)
-        print(f"mode_score = {mode_score}")
+        model_score = self.model_service.predict(db=db, features=features)
+        print(f"model_score = {model_score}")
